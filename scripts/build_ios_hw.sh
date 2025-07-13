@@ -53,9 +53,8 @@ cat > ios_hw.sh << 'EOF'
 ./ios.sh \
   --enable-gpl \
   --enable-ios-videotoolbox \
-  --enable-libwebp \
   --enable-x264 \
-  --enable-x265
+  --enable-gnutls
 EOF
 
 chmod +x ios_hw.sh
@@ -73,6 +72,5 @@ echo -e "${GREEN}=== iOS build completed successfully! ===${NC}"
 echo -e "${GREEN}Built artifacts are in: $OUTPUT_DIR${NC}"
 echo -e "${GREEN}Enabled features:${NC}"
 echo -e "${GREEN}  - VideoToolbox hardware acceleration${NC}"
-echo -e "${GREEN}  - WebP support${NC}"
 echo -e "${GREEN}  - H.264 encoding (x264)${NC}"
-echo -e "${GREEN}  - H.265 encoding (x265)${NC}" 
+echo -e "${GREEN}  - GnuTLS support${NC}"

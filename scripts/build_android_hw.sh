@@ -58,9 +58,8 @@ export ANDROID_NDK_ROOT="${ANDROID_NDK_ROOT}"
 ./android.sh \
   --enable-gpl \
   --enable-android-media-codec \
-  --enable-libwebp \
   --enable-x264 \
-  --enable-x265
+  --enable-gnutls
 EOF
 
 chmod +x android_hw.sh
@@ -78,6 +77,5 @@ echo -e "${GREEN}=== Android build completed successfully! ===${NC}"
 echo -e "${GREEN}Built artifacts are in: $OUTPUT_DIR${NC}"
 echo -e "${GREEN}Enabled features:${NC}"
 echo -e "${GREEN}  - MediaCodec hardware acceleration${NC}"
-echo -e "${GREEN}  - WebP support${NC}"
 echo -e "${GREEN}  - H.264 encoding (x264)${NC}"
-echo -e "${GREEN}  - H.265 encoding (x265)${NC}" 
+echo -e "${GREEN}  - GnuTLS support${NC}"

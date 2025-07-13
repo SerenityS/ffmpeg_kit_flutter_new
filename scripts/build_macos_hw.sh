@@ -53,9 +53,8 @@ cat > macos_hw.sh << 'EOF'
 ./macos.sh \
   --enable-gpl \
   --enable-macos-videotoolbox \
-  --enable-libwebp \
   --enable-x264 \
-  --enable-x265
+  --enable-gnutls
 EOF
 
 chmod +x macos_hw.sh
@@ -72,6 +71,6 @@ cd ..
 echo -e "${GREEN}=== macOS build completed successfully! ===${NC}"
 echo -e "${GREEN}Built artifacts are in: $OUTPUT_DIR${NC}"
 echo -e "${GREEN}VideoToolbox support is enabled for:${NC}"
-echo -e "${GREEN}  - H.264/AVC${NC}"
-echo -e "${GREEN}  - H.265/HEVC${NC}"
-echo -e "${GREEN}  - WebP support${NC}" 
+echo -e "${GREEN}  - VideoToolbox hardware acceleration${NC}"
+echo -e "${GREEN}  - H.264 encoding (x264)${NC}"
+echo -e "${GREEN}  - GnuTLS support${NC}"
